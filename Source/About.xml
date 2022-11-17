@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Yayo's EndGame</name>
+  <author>Latki, YAYO</author>
+  <supportedVersions>
+    <li>1.2</li>
+    <li>1.3</li>
+  </supportedVersions>
+  <packageId>com.yayo.ending</packageId>
+  <loadAfter>
+    <li>UnlimitedHugs.HugsLib</li>
+  </loadAfter>
+  <incompatibleWith>
+    <li>kentington.saveourship2</li>
+  </incompatibleWith>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+    </li>
+    <li>
+      <packageId>UnlimitedHugs.HugsLib</packageId>
+      <displayName>HugsLib</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/818773962</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+  <description>Add a new ending.
+\n1. Extract 100 biome energy shards from each of 3 biomes.
+\n2. Make a planet energy core.
+\n3. Build a planet energy teleporter.
+\n4. 15-day raid defense.
+\n5. Escape.</description>
+</ModMetaData>
