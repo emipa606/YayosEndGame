@@ -1,5 +1,8 @@
 # Changelog for YayosEndGame
 
+1.4.2 - Should now exclude extreme biomes from energy shards extraction. This should block sea ice and ice sheet as possible biomes
+
+
 1.4.1 - Fixed preview
 
 

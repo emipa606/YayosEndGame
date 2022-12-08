@@ -66,8 +66,7 @@ public class core : ModBase
 
 
         foreach (var b in from biome in DefDatabase<BiomeDef>.AllDefs
-                 where
-                     biome.impassable == false
+                 where !biome.impassable && !biome.isExtremeBiome
                  select biome)
         {
             var t = new ThingDef
