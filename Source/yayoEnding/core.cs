@@ -13,11 +13,13 @@ public class core : ModBase
     public static List<string> ar_gemDef = new List<string>();
     public static int goalBiome = 2;
     public static float extractSpeed = 1f;
+    public static bool ignoreExtreme;
 
     private SettingHandle<float> extractSpeedSetting;
 
-
     private SettingHandle<int> goalBiomeSetting;
+
+    private SettingHandle<bool> ignoreExtremeSetting;
     public override string ModIdentifier => "yayoEnding";
 
 
@@ -27,6 +29,11 @@ public class core : ModBase
         goalBiomeSetting =
             Settings.GetHandle("goalBiome", "goalBiome_title".Translate(), "goalBiome_desc".Translate(), 2);
         goalBiome = goalBiomeSetting.Value;
+
+        ignoreExtremeSetting =
+            Settings.GetHandle("ignoreExtreme", "yayoEnding_ExcludeExtreme".Translate(),
+                "yayoEnding_ExcludeExtremeTT".Translate(), false);
+        ignoreExtreme = ignoreExtremeSetting.Value;
 
         extractSpeedSetting = Settings.GetHandle("extractSpeed", "extractSpeed_title".Translate(),
             "extractSpeed_desc".Translate(), 1f);
@@ -66,7 +73,7 @@ public class core : ModBase
 
 
         foreach (var b in from biome in DefDatabase<BiomeDef>.AllDefs
-                 where !biome.impassable && !biome.isExtremeBiome
+                 where !biome.impassable && (ignoreExtreme || !biome.isExtremeBiome)
                  select biome)
         {
             var t = new ThingDef

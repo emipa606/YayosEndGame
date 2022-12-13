@@ -14,4 +14,6 @@
   <yayoEnding_energyPiece>{0 tesson d'énergie</yayoEnding_energyPiece>
   <yayoEnding_energyCore_recipe_label>faire {0} {1}</yayoEnding_energyCore_recipe_label>
   <yayoEnding_energyCore_recipe_jobstring>Faire {0}</yayoEnding_energyCore_recipe_jobstring>
+  <yayoEnding_ExcludeExtreme>Ignorer les biomes extrêmes (redémarrage)</yayoEnding_ExcludeExtreme>
+  <yayoEnding_ExcludeExtremeTT>(Nécessite un redémarrage)\NIgnore les biomes extrêmes lors de la sélection des biomes pour l'extraction des tessons.</yayoEnding_ExcludeExtremeTT>
 </LanguageData>

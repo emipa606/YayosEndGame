@@ -14,4 +14,6 @@
   <yayoEnding_energyPiece>{0} энергетический осколок</yayoEnding_energyPiece>
   <yayoEnding_energyCore_recipe_label>сделать {0} {1}</yayoEnding_energyCore_recipe_label>
   <yayoEnding_energyCore_recipe_jobstring>Делаем {0}</yayoEnding_energyCore_recipe_jobstring>
+  <yayoEnding_ExcludeExtreme>Игнорировать экстремальные биомы (перезапуск)</yayoEnding_ExcludeExtreme>
+  <yayoEnding_ExcludeExtremeTT>(Требуется перезагрузка)\nПри выборе биомов для добычи осколков будут игнорироваться экстремальные биомы</yayoEnding_ExcludeExtremeTT>
 </LanguageData>
