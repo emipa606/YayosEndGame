@@ -10,7 +10,7 @@ namespace yayoEnding;
 
 public class core : ModBase
 {
-    public static List<string> ar_gemDef = new List<string>();
+    public static readonly List<string> ar_gemDef = [];
     public static int goalBiome = 2;
     public static float extractSpeed = 1f;
     public static bool ignoreExtreme;
@@ -84,7 +84,7 @@ public class core : ModBase
                 resourceReadoutPriority = ResourceCountPriority.Middle,
                 selectable = true,
                 altitudeLayer = AltitudeLayer.Item,
-                comps = new List<CompProperties> { new CompProperties_Forbiddable() },
+                comps = [new CompProperties_Forbiddable()],
                 alwaysHaulable = true,
                 drawGUIOverlay = true,
                 rotatable = false,
@@ -104,11 +104,11 @@ public class core : ModBase
                 soundDrop = SoundDef.Named("Silver_Drop"),
                 useHitPoints = false,
                 healthAffectsPrice = false,
-                statBases = new List<StatModifier>()
+                statBases = []
             };
 
             t.statBases = RimWorld.ThingDefOf.Silver.statBases;
-            t.thingCategories = new List<ThingCategoryDef>();
+            t.thingCategories = [];
 
             t.stackLimit = 100;
             //t.smallVolume = true;
@@ -121,7 +121,7 @@ public class core : ModBase
 
             t.thingCategories.Add(ThingCategoryDef.Named("yy_gem_piece_category"));
             t.tradeability = Tradeability.None;
-            t.tradeTags = new List<string> { "yy_gem" };
+            t.tradeTags = ["yy_gem"];
 
             ar_gemDef.Add(t.defName);
             DefGenerator.AddImpliedDef(t);
@@ -152,14 +152,14 @@ public class core : ModBase
                 effectWorking = EffecterDefOf.Drill,
                 soundWorking = SoundDef.Named("Recipe_Machining"),
                 workAmount = 1500, // 작업량
-                recipeUsers = new List<ThingDef>
-                {
+                recipeUsers =
+                [
                     ThingDef.Named("CraftingSpot"),
                     ThingDef.Named("FueledSmithy"),
                     ThingDef.Named("ElectricSmithy"),
                     ThingDef.Named("TableMachining"),
                     ThingDef.Named("FabricationBench")
-                }, // 제작 장소
+                ], // 제작 장소
                 unfinishedThingDef = ThingDef.Named("UnfinishedComponent")
             };
 
@@ -193,14 +193,14 @@ public class core : ModBase
             //Log.Message($"{r.ingredients[0].filter.AnyAllowedDef.defName}");
 
 
-            r.products = new List<ThingDefCountClass>();
+            r.products = [];
             var tdc = new ThingDefCountClass
             {
                 thingDef = ThingDef.Named("yy_planetCore"),
                 count = 1
             };
             r.products.Add(tdc);
-            r.skillRequirements = new List<SkillRequirement>();
+            r.skillRequirements = [];
             var sr = new SkillRequirement
             {
                 skill = SkillDefOf.Crafting,

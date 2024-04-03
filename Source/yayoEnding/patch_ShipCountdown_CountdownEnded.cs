@@ -42,8 +42,9 @@ internal class patch_ShipCountdown_CountdownEnded
             p.Destroy();
         }
 
-        GameVictoryUtility.ShowCredits(GameVictoryUtility.MakeEndCredits("yayoEnding_intro".Translate(),
-            "yayoEnding_ending".Translate(), stringBuilder.ToString()));
+        GameVictoryUtility.ShowCredits(
+            GameVictoryUtility.MakeEndCredits("yayoEnding_intro".Translate(), "yayoEnding_ending".Translate(),
+                stringBuilder.ToString()), SongDefOf.EndCreditsSong);
         foreach (var thing in list)
         {
             thing.Destroy();

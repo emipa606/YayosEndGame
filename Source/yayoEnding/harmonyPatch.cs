@@ -7,8 +7,7 @@ public class harmonyPatch : Mod
 {
     public harmonyPatch(ModContentPack content) : base(content)
     {
-        var harmony = new Harmony("yayoEnding");
-        harmony.PatchAll();
+        new Harmony("yayoEnding").PatchAll();
     }
 }
 

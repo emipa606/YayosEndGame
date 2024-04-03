@@ -1,5 +1,8 @@
 # Changelog for YayosEndGame
 
+1.5.0 - Mod updated for 1.5 and passed autotests
+
+
 1.4.3 - Added a mod-setting for ignoring extreme biomes.
 Used DeepL to update translations for ChineseSimplified, French, German, Russian
 

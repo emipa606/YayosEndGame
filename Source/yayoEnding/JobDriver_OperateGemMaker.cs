@@ -14,11 +14,11 @@ public class JobDriver_OperateGemMaker : JobDriver
 
     protected override IEnumerable<Toil> MakeNewToils()
     {
-        var f = this;
-        f.FailOnDespawnedNullOrForbidden(TargetIndex.A);
-        f.FailOnBurningImmobile(TargetIndex.A);
-        f.FailOnThingHavingDesignation(TargetIndex.A, DesignationDefOf.Uninstall);
-        f.FailOn(() => !job.targetA.Thing.TryGetComp<CompGemMaker>().CanDrillNow());
+        var operateGemMaker = this;
+        operateGemMaker.FailOnDespawnedNullOrForbidden(TargetIndex.A);
+        operateGemMaker.FailOnBurningImmobile(TargetIndex.A);
+        operateGemMaker.FailOnThingHavingDesignation(TargetIndex.A, DesignationDefOf.Uninstall);
+        operateGemMaker.FailOn(() => !job.targetA.Thing.TryGetComp<CompGemMaker>().CanDrillNow());
         yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.InteractionCell);
         var work = new Toil();
         work.tickAction = () =>
