@@ -5,9 +5,9 @@ using Verse;
 namespace yayoEnding;
 
 [HarmonyPatch(typeof(ThingFilter), nameof(ThingFilter.SetFromPreset))]
-internal class ThingFilter_SetFromPreset
+internal static class ThingFilter_SetFromPreset
 {
-    private static void Postfix(ThingFilter __instance, StorageSettingsPreset preset)
+    public static void Postfix(ThingFilter __instance, StorageSettingsPreset preset)
     {
         if (preset == StorageSettingsPreset.DefaultStockpile)
         {

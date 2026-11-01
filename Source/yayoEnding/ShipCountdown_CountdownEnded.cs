@@ -8,7 +8,7 @@ using Verse;
 namespace yayoEnding;
 
 [HarmonyPatch(typeof(ShipCountdown), "CountdownEnded")]
-internal class ShipCountdown_CountdownEnded
+internal static class ShipCountdown_CountdownEnded
 {
     private static readonly FieldInfo fShipRoot = AccessTools.Field(typeof(ShipCountdown), "shipRoot");
 

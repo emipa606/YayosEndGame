@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Xml.Linq;
 using HarmonyLib;
 using RimWorld;
@@ -40,7 +41,7 @@ public class YayoEndingMod : Mod
 
         DebugLogging("[YayoEnding] :: Harmony patching");
 
-        new Harmony("yayoEnding").PatchAll();
+        new Harmony("yayoEnding").PatchAll(Assembly.GetExecutingAssembly());
 
         goalBiomeBuffer = settings.goalBiome.ToString();
     }
@@ -81,7 +82,7 @@ public class YayoEndingMod : Mod
         }
 
         Instance.settings.Write();
-        xml.Root.Element(modNodeName)?.Remove();
+        xml.Root?.Element(modNodeName)?.Remove();
         xml.Save(hugsLibConfig);
 
         Log.Message("[YayoCombat3]: Imported old HugLib-settings");
@@ -159,9 +160,9 @@ public class YayoEndingMod : Mod
             }
 
 
-            r.products = [new ThingDefCountClass() { thingDef = ThingDef.Named("yy_planetCore"), count = 1 }];
+            r.products = [new ThingDefCountClass { thingDef = ThingDef.Named("yy_planetCore"), count = 1 }];
 
-            r.skillRequirements = [new SkillRequirement() { skill = SkillDefOf.Crafting, minLevel = 8 }];
+            r.skillRequirements = [new SkillRequirement { skill = SkillDefOf.Crafting, minLevel = 8 }];
 
             r.workSkill = SkillDefOf.Crafting;
 
@@ -315,7 +316,7 @@ public class YayoEndingMod : Mod
                 useHitPoints = false,
                 healthAffectsPrice = false,
                 // statBases from silver
-                statBases = [..RimWorld.ThingDefOf.Silver.statBases],
+                statBases = [.. RimWorld.ThingDefOf.Silver.statBases],
                 thingCategories = [],
                 stackLimit = 100,
                 burnableByRecipe = false,

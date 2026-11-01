@@ -6,4 +6,17 @@
     <BuildType Name="Release" />
   </Configurations>
   <Project Path="yayoEnding/yayoEnding.csproj" />
+  <Folder Name="/XML/About/">
+    <File Path="../About/about.xml" />
+  </Folder>
+  <Folder Name="/XML/Languages/English/Keyed/">
+    <File Path="../Languages/English/Keyed/Keys.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/">
+    <File Path="../1.7/Defs/categories.xml" />
+    <File Path="../1.7/Defs/item.xml" />
+    <File Path="../1.7/Defs/Jobs_Work.xml" />
+    <File Path="../1.7/Defs/UpdateInfo.xml" />
+    <File Path="../1.7/Defs/WorkGivers.xml" />
+  </Folder>
 </Solution>

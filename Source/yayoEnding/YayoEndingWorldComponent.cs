@@ -30,15 +30,15 @@ public class YayoEndingWorldComponent : WorldComponent
 
         // collect gem defs that exist on tiles and are buildable
         var tmp_ar_gemDef = new List<string>();
-        foreach (var tile in Find.WorldGrid.Tiles)
+        foreach (var biome in Find.WorldGrid.Tiles.Select(tile => tile.PrimaryBiome))
         {
-            var gemDefName = $"yy_gem_{tile.PrimaryBiome.defName}";
+            var gemDefName = $"yy_gem_{biome.defName}";
             if (DefDatabase<ThingDef>.GetNamedSilentFail(gemDefName) == null)
             {
                 continue;
             }
 
-            if (tile.PrimaryBiome.canBuildBase && !tmp_ar_gemDef.Contains(gemDefName))
+            if (biome.canBuildBase && !tmp_ar_gemDef.Contains(gemDefName))
             {
                 tmp_ar_gemDef.Add(gemDefName);
             }

@@ -121,4 +121,4 @@ If you are proficient in C# and are interested, please contact me on the rimworl
 
  
 
-[![Image](https://img.shields.io/github/v/release/emipa606/YayosEndGame?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/2889874629) | tags: planet teleportation, epic journey
+[![Image](https://img.shields.io/github/v/release/emipa606/YayosEndGame?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/2889874629) | epic journey, planet teleportation
